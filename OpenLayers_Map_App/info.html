@@ -1,0 +1,64 @@
+<!doctype html>
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css" type="text/css">
+    <link rel="stylesheet" href="./libs/v6.6.1-dist/ol.css" type="text/css">
+    <title>Informacje o projekcie</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <h1 class="homepage-title">Zebra - uważaj na siebie</h1>
+        <div class="main">
+
+            <div class="menu-mobile">
+                <div class="topnav" id="myTopnav">
+                    <a class="active" href="info.html">Informacje o projekcie</a>
+                    <a href="index.html">Strona główna</a>
+                    <a href="lokalizacja.html">Znajdź mnie</a>
+                    <a href="dzialanie.html">Jak to działa?</a>
+                    <a href="javascript:void(0);" class="icon" onclick="openMenu()">
+                    <i class="fa fa-bars"></i>
+                  </a>
+                </div>
+                
+                <script>
+                function openMenu() {
+                  var x = document.getElementById("myTopnav");
+                  if (x.className === "topnav") {
+                    x.className += " responsive";
+                  } else {
+                    x.className = "topnav";
+                  }
+                }
+                </script>
+              </div>
+
+            <ul class="menu">
+                <li><a href="index.html">Strona główna</a></li>
+                <li><a href="lokalizacja.html">Znajdź mnie</a></li>
+                <li><a href="dzialanie.html">Jak to działa?</a></li>
+                <li><a class="active" href="info.html">Informacje o projekcie</a></li>
+              </ul>
+            <div class="info">
+                <h2 class="info-caption">Informacje o projekcie</h2>
+
+                <table class="info-card">
+                    <tbody>
+                        <tr>
+                            <td class="info-col"><p class="info-content">Autorem niniejszej pracy jest Daniel Gądek.</p></td>
+                        </tr>
+                        <tr>
+                            <td class="info-col"><p class="info-content">Serwis ten stanowi integralną część pracy magisterskiej na kierunku Elektroniczne Przetwarzanie Informacji.</p></td>
+                        </tr>
+                        <tr>
+                            <td class="info-col"><p class="info-content">Projekt został przygotowany pod kierunkiem prof. dra. hab. Mariusza Flasińskiego na Wydziale Zarządzaja i Komunikacji Społecznej Uniwersytetu Jagiellońskiego.</p></td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+            </div>
+        </div>
+    </body>
+</html>

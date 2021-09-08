@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css" type="text/css">
+    <link rel="stylesheet" href="./libs/v6.6.1-dist/ol.css" type="text/css">
+    <title>MAPA</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <script src="./libs/v6.6.1-dist/ol.js"></script>
+    <script src="./main.js" defer></script>
+    <h1 class="homepage-title">Zebra - uważaj na siebie</h1>
+    
+    <div class="main">
+      <h1 class="homepage-title-mobile">Zebra - uważaj na siebie</h1>
+      <div class="menu-mobile">
+        <div class="topnav" id="myTopnav">
+          <a href="index.html" class="active">Strona główna</a>
+          <a href="lokalizacja.html">Znajdź mnie</a>
+          <a href="dzialanie.html">Jak to działa?</a>
+          <a href="info.html">Informacje o projekcie</a>
+          <a href="javascript:void(0);" class="icon" onclick="openMenu()">
+            <i class="fa fa-bars"></i>
+          </a>
+        </div>
+        
+        <script>
+        function openMenu() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+        </script>
+      </div>
+
+      <ul class="menu">
+        <li><a class="active" href="index.html">Strona główna</a></li>
+        <li><a href="lokalizacja.html">Znajdź mnie</a></li>
+        <li><a href="dzialanie.html">Jak to działa?</a></li>
+        <li><a href="info.html">Informacje o projekcie</a></li>
+      </ul>
+      <h2 class="map-caption">Wodzisławska, Żory - przejścia dla pieszych</h2>
+    <div id="map" class="map"></div>
+    
+    <table class="legenda">
+      <thead>
+        <tr class="legenda-head">
+          <th class="legenda-title" colspan="3">Legenda</th>
+        </tr>
+      </thead>
+      <thead>
+        <tr class="legenda-col">
+          <th class="legenda-header">Znacznik</th>
+          <th class="legenda-header">Opis</th>
+          <th class="legenda-header">Znaczenie</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="legenda-row">
+          <td class="legenda-content"><img src="./img/ydot.png" alt="ydot"></img></td>
+          <td class="legenda-content">Żółta kropka (#F9F835)</td>
+          <td class="legenda-content">Przejście jednoetapowe (bez wysepki)</td>
+        </tr>
+        <tr class="legenda-row">
+          <td class="legenda-content"><img src="./img/rdot.png" alt="rdot"></img></td>
+          <td class="legenda-content">Czerwona kropka (#F52D2A)</td>
+          <td class="legenda-content">Przejście dwuetapowe (podzielone wysepką)</td>
+        </tr>
+      </tbody>
+    </table>
+<!--
+    <script>
+      function showNotification() {
+        const notif = new Notification('Auto!', {
+          body: 'Uważaj, przechodniu!'
+        });
+
+        notif.onclick = (e) => {
+          window.location.href = "https://storkstation.bandcamp.com";
+        }
+      }
+
+      console.log(Notification.permission);
+
+      if (Notification.permission === "granted") {
+        showNotification();
+      } else if (Notification.permission === "denied") {
+        Notification.requestPermission().then(permission => {
+          if (permission === "granted") {
+            showNotification();
+          }
+        })
+      }
+    </script>
+  -->
+
+      <footer>
+        <p>Daniel Gądek, Elektroniczne Przetwarzanie Informacji</p>
+      </footer>
+    </div>
+  </body>
+</html>

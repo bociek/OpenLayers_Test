@@ -1,13 +1,25 @@
+.body {
+  background-color: red;
+}
+
 .main {
-  background-color: springgreen;
+  background-color: white;
   margin-left: 2%;
   margin-right: 2%;
   border-radius: 25px;
 }
 
-.homepage-title {
-  text-align: center;
-  font-size: 30px;
+.logo-top {
+  background-color: #333;
+}
+
+.logo {
+  width: 50%;
+  height: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-bottom: 2%;
 }
 
 .menu-mobile {
@@ -60,7 +72,7 @@
 
 @media screen and (max-width: 600px) {
   .main {
-    background-color: indianred;
+    background-color: white;
     margin-left: 0;
     margin-right: 0;
     border-radius: 0%;
@@ -216,7 +228,6 @@
     text-align: left;
   }
 }
-  
 
 }
 
@@ -230,12 +241,23 @@
   font-size: 16px;
 }
 
+.geolocation-map {
+  height: 400px;
+  width: 100%;
+}
+
+.locate {
+  top: 6em;
+  left: .5em;
+}
+
 .legenda {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
   border: 1px solid black;
   border-collapse: collapse;
+  margin-top: 2%;
 }
 
 .legenda-head {
@@ -312,11 +334,108 @@
   padding-right: 5%;
 }
 
-footer {
-  background-color: black;
-  color: gainsboro;
+.index-content {
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.id-content {
+  padding: 8px;
+  border-bottom: 1px solid black;
+
+}
+
+.dzialanie-caption {
   text-align: center;
-  font-weight: bold;
-  border-bottom-left-radius: 25px;
-  border-bottom-right-radius: 25px;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  font-size: 48px;
+}
+
+.dzialanie-content {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.dzialanie-p {
+  margin-top: 0;
+  margin-bottom: 2%;
+}
+
+.img-demo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  height: 50%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.footer-basic {
+  padding:40px 0;
+  background-color: grey;
+  color: #111;
+}
+
+.footer-basic ul {
+  padding:0;
+  list-style:none;
+  text-align:center;
+  font-size:18px;
+  line-height:1.6;
+  margin-bottom:0;
+}
+
+.footer-basic li {
+  padding:0 10px;
+}
+
+.footer-basic ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.8;
+}
+
+.footer-basic ul a:hover {
+  opacity:1;
+}
+
+.footer-basic .social {
+  text-align:center;
+  padding-bottom:25px;
+}
+
+.footer-basic .social > a {
+  font-size:24px;
+  width:40px;
+  height:40px;
+  line-height:40px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  border:1px solid #ccc;
+  margin:0 8px;
+  color:inherit;
+  opacity:0.75;
+}
+
+.footer-basic .social > a:hover {
+  opacity:0.9;
+}
+
+.footer-basic .copyright {
+  margin-top:15px;
+  text-align:center;
+  font-size:13px;
+  color: white;
+  margin-bottom:0;
+}
+
+.footer-logo {
+  width: 20%;
+  height: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }

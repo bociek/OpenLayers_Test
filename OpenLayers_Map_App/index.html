@@ -5,14 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css" type="text/css">
     <link rel="stylesheet" href="./libs/v6.6.1-dist/ol.css" type="text/css">
-    <title>MAPA</title>
+    <title>Zebra - Strona główna</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="push.js"></script>
   </head>
   <body>
     <script src="./libs/v6.6.1-dist/ol.js"></script>
     <script src="./main.js" defer></script>
-    <h1 class="homepage-title">Zebra - uważaj na siebie</h1>
+    <div class="logo-top">
+      <img src="./img/zebra-logo.png" alt="logo" class="logo">
+    </div>
     
     <div class="main">
       <h1 class="homepage-title-mobile">Zebra - uważaj na siebie</h1>
@@ -41,7 +44,7 @@
 
       <ul class="menu">
         <li><a class="active" href="index.html">Strona główna</a></li>
-        <li><a href="lokalizacja.html">Znajdź mnie</a></li>
+        <li><a href="test.html">Znajdź mnie</a></li>
         <li><a href="dzialanie.html">Jak to działa?</a></li>
         <li><a href="info.html">Informacje o projekcie</a></li>
       </ul>
@@ -74,6 +77,69 @@
         </tr>
       </tbody>
     </table>
+
+    
+    <table class="index-content">
+      <thead>
+        <tr class="id-content-head">
+          <th>Czym jest Zebra?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="id-content">
+            Zebra jest prostym, niezależnym projektem, mającym na celu zwiększenie bezpieczeństwa pieszych na przejściach drogowych, które potocznie nazywane są zebrami.
+          </td>
+        </tr>
+        <tr>
+          <td class="id-content">
+            System został oparty o mechanizm powiadomień push, które wysyłane są na ekran użytkownika w chwili, gdy ten zblizy się do oznaczonego na mapie przejścia dla pieszych. 
+            Taki sposób prezentacji ostrzeżenia został wybrany, ponieważ coraz częściej nam, uczestnikom ruchu ulicznego, zdarza się zatracić w ekranie swojego smartfona. 
+            Nie dostrzegamy wtedy tego, co dzieje się wokół, przez co narażamy siebie oraz innych na niebezpieczeństwo. 
+            Osobę, która porusza się po przestrzeni publicznej, będącą skupioną wyłącznie na ekranie własnego telefonu, nazywamy technologicznym zombie.
+          </td>
+        </tr>
+        <tr>
+          <td class="id-content">
+            Na mapce, którą możesz zobaczyć powyżej, zaznaczono przejścia, które w tym momencie objęte są programem. Jak widzisz, pokryto zaledwie jedną ulicę w Żorach, 
+            ale jeśli rozwiązanie sprawdzi się na takim obszarze, rozszerzenie jego działania nie będzie problemem, ponieważ Zebra nie wykorzystuje zewnętrznych transmiterów sygnału 
+            (np. Bluetooth). Lokalizację każdych pasów zapisywana jest w specjalnym pliku, z którego cały czas korzysta aplikacja. Dzięki takiemu podejściu, możliwe jest zredukowanie kosztów 
+            wprowadzenia tego rozwiązania na większym obszarze.
+          </td>
+        </tr>
+        <tr>
+          <td class="id-content">
+            Żeby jednak aplikacja mogła działać poprawnie i spełniała swoją podstawową fukncję, musisz zezwolić na wysyłanie powiadomień push na Twój telefon. 
+            Możesz to zrobić, naciskając poniższy przycisk.
+          </td>
+        </tr>
+        <tr>
+          <td class="gimme-notifs-btn">
+            <button class="notif-btn" onclick="notifPermission()">Chcę otrzymywać powiadomienia!</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    
+    
+    <script>
+      // Push.create('Pierwsze powiadomienie dziecka');
+
+      function notifPermission() {
+        if (Notification.permission === 'granted') {
+          // Jeśli powiadomienia są włączone, wyświetlam potwierdzenie
+          var notificaion = new Notification('Dziękujemy za włączenie powiadomień!');
+        } else if (Notification.permission !== 'denied') {
+          Notification.requestPermission().then(function (permission) {
+            // Jeśli użytkownik zatwierdzi prośbę, wysyłam potwierdzenie
+            if (permission === 'granted') {
+              var notificaion = new Notification('Dziękujemy za włączenie powiadomień!');
+            }
+          });
+        }
+      }
+
+    </script>
 <!--
     <script>
       function showNotification() {

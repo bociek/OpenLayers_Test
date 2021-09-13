@@ -9,7 +9,9 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
-        <h1 class="homepage-title">Zebra - uważaj na siebie</h1>
+      <div class="logo-top">
+        <img src="./img/zebra-logo.png" alt="logo" class="logo">
+      </div>
         <div class="main">
 
             <div class="menu-mobile">
@@ -41,11 +43,108 @@
                 <li><a class="active" href="dzialanie.html">Jak to działa?</a></li>
                 <li><a href="info.html">Informacje o projekcie</a></li>
               </ul>
-            <div class="lokalizacja">
-                <h2 class="lokalizacja-caption">Jak to działa?</h2>
+            <div class="dzialanie">
+                <h2 class="dzialanie-caption">Jak działa aplikacja?</h2>
+
+                <table class="dzialanie-content">
+                  <tr>
+                    <th><img src="./img/icon-notification.png" alt="powiadomienie" class="img-demo"></th>
+                  </tr>
+                  <tr>
+                    <td><h2>Krok 1. Włączenie powiadomień</h2></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="dzialanie-p">Główną funkcjonalnością aplikacji jest wyświetlanie powiadomień na ekranie Twojego telefonu, 
+                        więc jest to podstawowa prośba, na którą musisz wyrazić zgodę. Aplikacja nie zbiera od użytkowników
+                        żadnych danych poza tymi, dotyczącymi lokalizacji urządzenia. Są to niezbędne dane, ponieważ budowa
+                        Zebry opiera się nie na fizycznych nadajnikach sygnału Bluetooth, a na współrzędnych geograficznych.</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th><img src="./img/icon-location.png" alt="polozenie" class="img-demo"></th>
+                  </tr>
+                  <tr>
+                    <td><h2>Krok 2. Lokalizacja Twojego urządzenia</h2></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="dzialanie-p">Kiedy już umożliwisz aplikacji przesyłanie powiadomień, Twoje urządzenie będzie mogło zostać
+                        zlokalizowane. Po co? Algorytm działa na zasadzie porównywania Twojego położenia z lokalizacjami
+                        przejść dla pieszych, zapisanych w pamięci aplikacji. Jeśli zbliżysz się do któregoś z nich
+                        na kilka metrów, program to zarejestruje i przekaże informację o tym do silnika powiadomień, 
+                        który wyśle stosowne ostrzeżenie.
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th><img src="./img/icon-crossroad.png" alt="przejscie" class="img-demo"></th>
+                  </tr>
+                  <tr>
+                    <td><h2>Krok 3. Monitorowanie położenia</h2></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="dzialanie-p">Dzięki udostępnieniu położenia, aplikacja jest w stanie śledzić Twoją lokalizację, odświeżając ją 
+                        co jakiś czas. To pozwala zachować w miarę aktualną pozycję, co zwiększa dokładność działania mechanizmu 
+                        ostrzegania. W chwili, kiedy faktycznie znajdziesz się w zasięgu przejścia, Zebra będzie o tym wiedziała.
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th><img src="./img/icon-phone.png" alt="telefon" class="img-demo"></th>
+                  </tr>
+                  <tr>
+                    <td><h2>Krok 4. Znalezienie się w pobliżu przejścia dla pieszych</h2></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="dzialanie-p">
+                        Czuwając nad Twoim położeniem, aplikacja może porównywać Twoją aktualną długość i szerokość geograficzną 
+                        do wartości zapisanych wewnątrz aplikacji. W chwili, gdy pierwsza wartość zbliży się na określony dystans 
+                        do którejś z wartości, określającej pasy, zostanie to zarejestrowane, co spowoduje zaalarmowanie systemu powiadomień.
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th><img src="./img/icon-demo.png" alt="demonstracja" class="img-demo"></th>
+                  </tr>
+                  <tr>
+                    <td><h2>Krok 5. Wysłanie powiadomienia na Twój telefon</h2></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="dzialanie-p">To wydarzenie spowoduje uruchomienie całego mechanizmu. Myślą przewodnią, która towarzyszyła przy tworzeniu 
+                        Zebry, była ochrona osób, zbyt zaabsorbowanych swoim smartfonem, by patrzeć na to, co dzieje się wokół. Takie 
+                        osoby nazywa się potocznie <strong>technologicznymi zombie</strong>. W skrajnych przypadkach mogą stanowić 
+                        zagrożenie nie tylko dla siebie, ale również dla innych uczestników ruchu. Właśnie dlatego aplikacja generuje 
+                        powiadomienia. Mają one za zadanie ostrzeżenie takich osób. Być może dzięki takim środkom, choć na chwilę oderwą 
+                        wzrok od ekranu telefonu i rozejrzą się w obie strony.
+                      </p>
+                    </td>
+                  </tr>
+                </table>
 
                 
             </div>
+
         </div>
+        
+        <div class="footer-basic">
+          <footer>
+              <div class="social"><img src="./img/zebra-logo.png" alt="logo" class="footer-logo"></div>
+              <ul class="list-inline">
+                  <li class="list-inline-item"><a href="#">Home</a></li>
+                  <li class="list-inline-item"><a href="#">Services</a></li>
+                  <li class="list-inline-item"><a href="#">About</a></li>
+                  <li class="list-inline-item"><a href="#">Terms</a></li>
+                  <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+              </ul>
+              <p class="copyright">Daniel Gądek | Elektroniczne Przetwarzanie Informacji | 2021</p>
+          </footer>
+      </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+
     </body>
 </html>

@@ -190,8 +190,6 @@ const przejscia = new ol.layer.Vector({
   })
 })
 
-// Notifications
-
 // Icon styles
 
 zebra1.setStyle(new ol.style.Style({

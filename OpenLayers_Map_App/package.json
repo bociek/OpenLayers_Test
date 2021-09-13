@@ -1,0 +1,37 @@
+{
+  "name": "openlayers_map_app",
+  "version": "1.0.0",
+  "description": "An application that notifies user whenever he/she is close to the crosswalk",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bociek/OpenLayers_Test.git"
+  },
+  "keywords": [
+    "osm",
+    "openstreetmap",
+    "openlayers",
+    "crosswalk",
+    "pedestrian",
+    "smartphone",
+    "geolocation"
+  ],
+  "author": "Daniel Gądek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bociek/OpenLayers_Test/issues"
+  },
+  "homepage": "https://github.com/bociek/OpenLayers_Test#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "ol": "^6.7.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.0.0-beta.1"
+  },
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build --public-url . index.html",
+    "test": "sprawdz"
+  }
+}
